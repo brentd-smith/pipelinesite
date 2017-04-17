@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import os
 
 # Create your views here.
 def index(request):
@@ -7,4 +8,5 @@ def index(request):
 
 
 def hello(request):
-    return HttpResponse("<h2>Hello</h1>")
+    env = os.environ['APPLICATION_ENVIRONMENT'] 
+    return HttpResponse("<h2>Hello {}</h1>".format(env))
