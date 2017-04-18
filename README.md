@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/brentd-smith/pipelinesite.svg?branch=master)](https://travis-ci.org/brentd-smith/pipelinesite)
+
 # Heroku Django Starter Template
 
 An utterly fantastic project starter template for Django 1.10.
