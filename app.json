@@ -2,7 +2,7 @@
   "name": "pipelinesite",
   "description": "Trying to figure out GitHub - Heroku Pipeline",
   "scripts": {
-    "tests": "python manage.py test books"
+    
   },
   "env": {
   },
