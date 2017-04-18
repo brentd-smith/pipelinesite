@@ -8,5 +8,5 @@ def index(request):
 
 
 def hello(request):
-    env = os.environ['APPLICATION_ENVIRONMENT'] 
+    env = os.environ['APPLICATION_ENVIRONMENT'] or "testing"
     return HttpResponse("<h2>Hello {}</h1>".format(env))
