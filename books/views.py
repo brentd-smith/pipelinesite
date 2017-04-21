@@ -12,4 +12,4 @@ def hello(request):
         env = os.environ['APPLICATION_ENVIRONMENT'] or "testing"
     except KeyError:
         env = "review_app"
-    return HttpResponse("<h2>Hello {}</h1>".format(env))
+    return HttpResponse("<h2>Hello {}</h2>".format(env))
