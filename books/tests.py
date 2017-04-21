@@ -2,16 +2,27 @@ from django.test import TestCase
 from django.http import HttpResponse
 import os
 from .views import hello
-# from django.test import Client
+from django.test import Client
 
 # Create your tests here.
 class InitialBooksTests(TestCase):
 
-    # c = Client()
+
+    """
+    NOTE: this demonstrates using the django.test.Client object to simulate
+    actual GET or POST requests to the django server.
+    """
+    def test_hello_with_client(self):
+        c = Client(HTTP_USER_AGENT='Mozilla/5.0')
+        r = c.get('/hello/')
+        self.assertEqual(r.status_code, 200)
+        self.assertEqual(r.content, "<h2>Hello review_app</h2>".encode('UTF-8'))
+    
     
     def test_assertion(self):
         self.assertTrue(True)
 
+    # This simply calls the view as a python method...
     def test_hello_world(self):
         """
         Hello World of Django Testing
